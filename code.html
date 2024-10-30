@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Diwali - Festival of Lights</title>
+  <style>
+    /* Reset and Body Styling */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Georgia', serif;
+      background-color: #2E1A16;
+      color: #FFFFFF;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* Card Styling */
+    .diwali-card {
+      width: 450px;
+      height: 650px;
+      padding: 30px;
+      background: linear-gradient(135deg, #5E0C0C, #8B0000);
+      border-radius: 20px;
+      box-shadow: 0 0 20px 12px rgba(255, 215, 0, 0.8);
+      text-align: center;
+      border: 8px solid #FFD700;
+      position: relative;
+    }
+
+    /* Heading Styling */
+    .diwali-card h1 {
+      font-size: 3em;
+      color: #FFD700;
+      font-family: 'Times New Roman', serif;
+      margin: 15px 0;
+      text-shadow: 0px 0px 10px rgba(255, 215, 0, 0.8);
+    }
+
+    /* Image Styling */
+    .diwali-card img {
+      width: 220px;
+      height: auto;
+      margin: 20px 0;
+      border-radius: 15px;
+      border: 4px solid #FFD700;
+      box-shadow: 0 0 20px 10px rgba(255, 215, 0, 0.7);
+    }
+
+    /* Paragraph Styling */
+    .diwali-card p {
+      color: #FFE4B5;
+      font-size: 1.3em;
+      margin: 20px 0;
+      line-height: 1.5;
+      font-style: italic;
+    }
+
+    .lights {
+        display: flex; /* Use flexbox to align the lights horizontally */
+        justify-content: space-around; /* Space out the lights */
+      }
+      
+      .light-bulb {
+        width: 50px; /* Set the width of the light bulb */
+        height: 50px; /* Set the height of the light bulb */
+        background-image: url('diya.jpg'); /* Path to your diya image */
+        background-size: cover; /* Ensure the image covers the div */
+        background-position: center; /* Center the image */
+        margin: -10px; /* Optional: adds some space between bulbs */
+        border-radius: 100px;
+      }
+       
+    @keyframes twinkle {
+      0% { opacity: 0.5; }
+      100% { opacity: 1; }
+    }
+
+    /* Diya Flame Effect */
+    .flame-container {
+      position: absolute;
+      bottom: 50px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 15px;
+    }
+    .flame {
+      width: 15px;
+      height: 30px;
+      background-color: #FFA500;
+      border-radius: 50% 50% 0 0;
+      position: relative;
+      animation: flicker 1.2s infinite alternate;
+      box-shadow: 0 -10px 20px rgba(255, 165, 0, 0.7);
+    }
+    .flame::before {
+      content: '';
+      position: absolute;
+      top: -5px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 8px;
+      height: 16px;
+      background-color: #FFD700;
+      border-radius: 50% 50% 0 0;
+      animation: innerFlicker 0.8s infinite alternate;
+      box-shadow: 0 -5px 15px rgba(255, 215, 0, 0.7);
+    }
+    @keyframes flicker {
+      0% { transform: scaleY(1); }
+      100% { transform: scaleY(0.9); }
+    }
+    @keyframes innerFlicker {
+      0% { transform: scaleY(1); }
+      100% { transform: scaleY(0.8); }
+    }
+
+    
+    
+
+    /* Footer Styling for Official Look */
+    .footer {
+      position: absolute;
+      bottom: -10px ;
+      width: 100%;
+      font-size: 0.6em;
+      color: #FFD700;
+      margin: 15px 0;
+      opacity: 0.9;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Card Structure -->
+  <div class="diwali-card">
+    <h1>Happy Diwali</h1>
+    <img src="img.jpg" alt="Diwali Diya Image">
+    <p>Celebrate Diwali with joy and prosperity! May this festival of lights brighten your future and bring Goddess Lakshmi’s blessings.</p>
+
+    <!-- Festive Lights -->
+    <div class="lights">
+      <div class="light-bulb"></div>
+      <div class="light-bulb"></div>
+      <div class="light-bulb"></div>
+      <div class="light-bulb"></div>
+      
+    </div>
+
+  
+
+    
+
+    <!-- Footer -->
+    <div class="footer">
+      <p>Festival of Love and Light 2024 </p>
+    </div>
+  </div>
+
+</body>
+</html>
